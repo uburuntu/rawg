@@ -1,7 +1,6 @@
 import pytest
 
 from rawg import AIORawg
-from rawg.types import RawgSearch
 
 pytestmark = pytest.mark.asyncio
 

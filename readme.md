@@ -1,6 +1,10 @@
 # RAWG.io API Wrapper
 
-Simple example:
+[![Python ⩾ 3.6](https://img.shields.io/badge/Python-⩾_3.6-blue.svg?longCache=true)]()
+[![PyPI](https://img.shields.io/pypi/v/rawg.svg)](https://pypi.python.org/pypi/rawg)
+
+## Simple example
+
 ```python
 import asyncio
 
