@@ -1,13 +1,13 @@
 import asyncio
 
-from rawg import AIORawg
+from rawg import AioRawg
 
 
 async def main():
-    r = AIORawg()
+    rawg = AioRawg()
 
     keyword = 'metal gear'
-    search = await r.search(keyword, page_size=3)
+    search = await rawg.search(keyword, page_size=3)
 
     print('Found:', search.count)
     for game in search.results:
@@ -15,6 +15,10 @@ async def main():
         print('----', 'Rating:', game.rating)
         for genre in game.genres:
             print('----', genre.name)
+
+    search = await rawg.search(keyword, page_size=1000)
+    coros = [rawg.info(game) for game in search.results]
+    await asyncio.gather(*coros)
 
 
 if __name__ == '__main__':

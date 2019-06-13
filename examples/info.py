@@ -1,10 +1,10 @@
 import asyncio
 
-from rawg import AIORawg
+from rawg import AioRawg
 
 
 async def main():
-    r = AIORawg()
+    r = AioRawg()
 
     slug = 'grand-theft-auto-v'
     game = await r.info(slug)

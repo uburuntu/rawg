@@ -8,11 +8,11 @@
 ```python
 import asyncio
 
-from rawg import AIORawg
+from rawg import AioRawg
 
 
 async def main():
-    r = AIORawg()
+    r = AioRawg()
 
     keyword = 'metal gear'
     search = await r.search(keyword, page_size=3)

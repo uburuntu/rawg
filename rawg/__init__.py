@@ -1,3 +1,3 @@
-from .api import AIORawg
+from .api import AioRawg, Rawg
 
-__version__ = '0.1'
+__version__ = '0.2'

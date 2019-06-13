@@ -1,7 +1,7 @@
 from datetime import date
 from typing import Any, List, Optional
 
-from pydantic import BaseModel
+from pydantic import BaseModel, Extra
 from pydantic.color import Color
 
 __all__ = (
@@ -16,8 +16,10 @@ __all__ = (
     'RawgClips',
     'RawgClip',
     'RawgScreenshot',
-    'RawgGenre',
+    'RawgGenreBase',
+    'RawgGameBase',
     'RawgGame',
+    'RawgGameSearch',
     'RawgSearch',
 )
 
@@ -25,28 +27,60 @@ __all__ = (
 class RawgBase(BaseModel):
     class Config:
         arbitrary_types_allowed = True
+        extra = Extra.forbid  # Todo: change to allow
+        validate_all = True
         validate_assignment = True
         use_enum_values = True
 
 
-class RawgPlatformData(RawgBase):
+class RawgPlatformDataBase(RawgBase):
     id: int
     name: str
     slug: str
 
 
-class RawgPlatform(RawgBase):
+class RawgPlatformData(RawgPlatformDataBase):
+    games_count: int
+    image_background: str
+
+    # Optional fields
+    image: Optional[str]
+    year_end: Optional[date]
+    year_start: Optional[date]
+
+
+class RawgPlatformBase(RawgBase):
+    platform: RawgPlatformDataBase
+
+
+class RawgPlatform(RawgPlatformBase):
     platform: RawgPlatformData
 
+    # Optional fields
+    requirements: Optional[dict]
+    released_at: Optional[date]
 
-class RawgStoreData(RawgBase):
+
+class RawgStoreDataBase(RawgBase):
     id: int
     name: str
     slug: str
 
 
-class RawgStore(RawgBase):
+class RawgStoreData(RawgStoreDataBase):
+    domain: str
+    games_count: int
+    image_background: str
+
+
+class RawgStoreBase(RawgBase):
+    store: RawgStoreDataBase
+
+
+class RawgStore(RawgStoreBase):
     store: RawgStoreData
+    id: int
+    url: str
 
 
 class RawgRating(RawgBase):
@@ -71,7 +105,18 @@ class RawgChartYear(RawgBase):
     position: int
 
 
+class RawgChartGenre(RawgBase):
+    name: str
+    change: str
+    position: int
+
+
 class RawgCharts(RawgBase):
+    full: Optional[int]
+    genre: Optional[RawgChartGenre]
+    person: Optional[dict]
+    released: Optional[RawgChartYear]
+    toplay: Optional[int]
     year: Optional[RawgChartYear]
 
 
@@ -98,87 +143,107 @@ class RawgScreenshot(RawgBase):
     image: str
 
 
-class RawgGenre(RawgBase):
+class RawgGenreBase(RawgBase):
     id: int
     name: str
     slug: str
 
 
+class RawgGenre(RawgGenreBase):
+    games_count: int
+    image_background: str
+
+
 class RawgGameBase(RawgBase):
-    slug: str
+    added: int
+    charts: Optional[RawgCharts]
+    comments_count: int
+    comments_parent_count: int
+    dominant_color: Color
+    genres: List[RawgGenreBase]
+    id: int
     name: str
-    promo: str
     playtime: int
-    platforms: Optional[List[RawgPlatform]]
-    stores: Optional[List[RawgStore]]
-    released: Optional[date]
-    tba: bool
-    background_image: Optional[str]
+    promo: str
     rating: float
     rating_top: int
     ratings: List[RawgRating]
     ratings_count: int
-    reviews_text_count: int
-    added: int
-    added_by_status: Optional[RawgAddedByStatus]
-    metacritic: Optional[int]
-    charts: RawgCharts
-    comments_count: int
-    comments_parent_count: int
-    suggestions_count: int
-    id: int
-    user_game: Any  # Unused
     reviews_count: int
+    reviews_text_count: int
     saturated_color: Color
-    dominant_color: Color
-    parent_platforms: Optional[List[RawgPlatform]]
-    genres: List[RawgGenre]
+    slug: str
+    suggestions_count: int
+    tba: bool
+
+    # Optional fields
+    added_by_status: Optional[RawgAddedByStatus]
+    background_image: Optional[str]
+    community_rating: Optional[int]
+    metacritic: Optional[int]
+    parent_platforms: Optional[List[RawgPlatformBase]]
+    platforms: Optional[List[RawgPlatformBase]]
+    released: Optional[date]
+    stores: Optional[List[RawgStoreBase]]
+
+    # Unused fields
+    user_game: Any
 
 
 class RawgGameSearch(RawgGameBase):
-    clip: Optional[RawgClip]
     score: str
     short_screenshots: List[RawgScreenshot]
 
+    # Optional fields
+    clip: Optional[RawgClip]
+
 
 class RawgGame(RawgGameBase):
-    background_image_additional: str
-    description_raw: str
-    description_is_protected: bool
-    events_count: int
-    collections_count: int
-    movies_count: int
-    developers: list
-    reddit_name: str
-    esrb_rating: dict
-    seo_title: str
-    reddit_count: int
-    tags: list
-    reddit_description: str
-    persons_count: int
-    seo_h1: str
-    imgur_count: int
-    seo_description: str
-    reddit_url: str
-    youtube_count: int
-    updated: str
-    publishers: list
     achievements_count: int
-    metacritic_url: str
-    seo_descriptions: dict
-    website: str
-    parent_achievements_count: int
-    twitch_count: int
+    collections_count: int
     description: str
-    reddit_logo: str
-    alternative_names: list
-    screenshots_count: int
-    reactions: dict
+    description_is_protected: bool
+    description_raw: str
+    developers: list
     discussions_count: int
+    events_count: int
+    genres: List[RawgGenre]
+    imgur_count: int
+    metacritic_url: str
+    movies_count: int
+    parent_achievements_count: int
+    persons_count: int
+    platforms: List[RawgPlatform]
+    publishers: list
+    reddit_count: int
+    reddit_description: str
+    reddit_logo: str
+    reddit_name: str
+    reddit_url: str
+    screenshots_count: int
+    seo_description: str
+    seo_descriptions: dict
+    seo_h1: str
+    seo_title: str
+    stores: List[RawgStore]
+    tags: list
+    twitch_count: int
+    updated: str
+    website: str
+    youtube_count: int
+
+    # Optional fields
+    alternative_names: Optional[list]
+    background_image_additional: Optional[str]
+    esrb_rating: Optional[dict]
+    reactions: Optional[dict]
+    redirect: Optional[str]
 
 
 class RawgSearch(RawgBase):
     count: int
+    results: List[RawgGameSearch]
+
+    # Optional fields
     next: Optional[str]
     previous: Optional[str]
-    results: List[RawgGameSearch]
