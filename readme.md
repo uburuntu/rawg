@@ -1,7 +1,11 @@
 # RAWG.io API Wrapper
 
-[![Python ⩾ 3.6](https://img.shields.io/badge/Python-⩾_3.6-blue.svg?longCache=true)]()
+[![Python](https://img.shields.io/badge/Python-3.6%20%7C%203.7%20%7C%203.8-blue.svg?longCache=true)]()
 [![PyPI](https://img.shields.io/pypi/v/rawg.svg)](https://pypi.python.org/pypi/rawg)
+
+[![Build Status](https://travis-ci.org/uburuntu/rawg.svg?branch=master)](https://travis-ci.org/uburuntu/rawg)
+[![codecov](https://codecov.io/gh/uburuntu/rawg/branch/master/graph/badge.svg)](https://codecov.io/gh/uburuntu/rawg)
+<!-- [![Codacy Badge](https://api.codacy.com/project/badge/Grade/aaf685a78dbf4377b8f36b401a5ccda1)](https://www.codacy.com/app/uburuntu/rawg?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=uburuntu/rawg&amp;utm_campaign=Badge_Grade) -->
 
 Pretty simple API wrapper for RAWG.io with typings.
 
