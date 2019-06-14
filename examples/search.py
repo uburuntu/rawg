@@ -1,24 +1,24 @@
 import asyncio
 
 from rawg import AioRawg
+from rawg.types import RawgGame
 
 
 async def main():
     rawg = AioRawg()
 
-    keyword = 'metal gear'
-    search = await rawg.search(keyword, page_size=3)
+    search = await rawg.search('metal gear', page_size=3)
+    requests = [rawg.info(game) for game in search.results]
 
-    print('Found:', search.count)
-    for game in search.results:
-        print('--', game.name)
-        print('----', 'Rating:', game.rating)
-        for genre in game.genres:
-            print('----', genre.name)
-
-    search = await rawg.search(keyword, page_size=1000)
-    coros = [rawg.info(game) for game in search.results]
-    await asyncio.gather(*coros)
+    print('Search results:', search.count)
+    for request in asyncio.as_completed(requests):
+        # Explicit typing usage cause of asyncio
+        game: RawgGame = await request
+        print(game.name)
+        print('--', 'Released:', game.released)
+        print('--', 'Rating:', game.rating)
+        print('--', 'Genres:', ', '.join(genre.name for genre in game.genres))
+        print('--', 'Available on:', ', '.join(p.platform.name for p in game.platforms))
 
 
 if __name__ == '__main__':

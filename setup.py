@@ -20,7 +20,7 @@ setuptools.setup(
     download_url='https://github.com/uburuntu/rawg/archive/master.zip',
     packages=['rawg'],
     requires_python='>=3.6',
-    install_requires=['aiohttp', 'pydantic'],
+    install_requires=['aiohttp', 'pydantic', 'requests'],
     classifiers=(
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',

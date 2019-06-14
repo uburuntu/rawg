@@ -18,9 +18,7 @@ class TestTypes:
         'dark souls',
     ])
     async def test_types_by_search(self, keyword):
-        search = await self.rawg.search(keyword, page_size=1000)
-        coros = [self.rawg.info(game) for game in search.results]
-        await asyncio.gather(*coros)
+        await self.rawg.search(keyword, page_size=10)
 
     @pytest.mark.parametrize('slug', [
         'grand-theft-auto-v',
@@ -28,7 +26,14 @@ class TestTypes:
         'metal-gear-solid-v-the-phantom-pain',
         'dark-souls',
     ])
-    async def test_types_by_suggested(self, slug):
-        search = await self.rawg.suggested(slug, page_size=1000)
-        coros = [self.rawg.info(game) for game in search.results]
-        await asyncio.gather(*coros)
+    async def test_search(self, slug):
+        await self.rawg.info(slug)
+
+    @pytest.mark.parametrize('slug', [
+        'grand-theft-auto-v',
+        'minecraft',
+        'metal-gear-solid-v-the-phantom-pain',
+        'dark-souls',
+    ])
+    async def test_search(self, slug):
+        await self.rawg.suggested(slug)

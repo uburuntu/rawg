@@ -3,7 +3,7 @@ from typing import Union
 import aiohttp
 import requests
 
-from rawg.types import RawgGame, RawgGameBase, RawgSearch
+from rawg.types import RawgGame, RawgGameBase, RawgSearch, RawgSuggested
 
 
 class BaseRawg:
@@ -46,10 +46,10 @@ class AioRawg(BaseRawg):
         result = await self.request(endpoint.format(slug=self.extract_slug(game)))
         return result if self.raw_results else RawgGame(**result)
 
-    async def suggested(self, game: Union[str, dict, RawgGameBase], page_size: int = 5):
+    async def suggested(self, game: Union[str, dict, RawgGameBase], page_size: int = 5) -> Union[dict, RawgSuggested]:
         endpoint = self.Endpoints.suggested
         result = await self.request(endpoint.format(slug=self.extract_slug(game)), page_size=page_size)
-        return result if self.raw_results else result
+        return result if self.raw_results else RawgSuggested(**result)
 
 
 class Rawg(BaseRawg):
@@ -77,7 +77,7 @@ class Rawg(BaseRawg):
         result = self.request(endpoint.format(slug=self.extract_slug(game)))
         return result if self.raw_results else RawgGame(**result)
 
-    def suggested(self, game: Union[str, dict, RawgGameBase], page_size: int = 5):
+    def suggested(self, game: Union[str, dict, RawgGameBase], page_size: int = 5) -> Union[dict, RawgSuggested]:
         endpoint = self.Endpoints.suggested
         result = self.request(endpoint.format(slug=self.extract_slug(game)), page_size=page_size)
-        return result if self.raw_results else result
+        return result if self.raw_results else RawgSuggested(**result)

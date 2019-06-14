@@ -4,30 +4,11 @@ from typing import Any, List, Optional
 from pydantic import BaseModel, Extra
 from pydantic.color import Color
 
-__all__ = (
-    'RawgPlatformData',
-    'RawgPlatform',
-    'RawgStoreData',
-    'RawgStore',
-    'RawgRating',
-    'RawgAddedByStatus',
-    'RawgChartYear',
-    'RawgCharts',
-    'RawgClips',
-    'RawgClip',
-    'RawgScreenshot',
-    'RawgGenreBase',
-    'RawgGameBase',
-    'RawgGame',
-    'RawgGameSearch',
-    'RawgSearch',
-)
-
 
 class RawgBase(BaseModel):
     class Config:
         arbitrary_types_allowed = True
-        extra = Extra.forbid  # Todo: change to allow
+        extra = Extra.allow
         validate_all = True
         validate_assignment = True
         use_enum_values = True
@@ -41,10 +22,10 @@ class RawgPlatformDataBase(RawgBase):
 
 class RawgPlatformData(RawgPlatformDataBase):
     games_count: int
-    image_background: str
 
     # Optional fields
     image: Optional[str]
+    image_background: Optional[str]
     year_end: Optional[date]
     year_start: Optional[date]
 
@@ -198,6 +179,13 @@ class RawgGameSearch(RawgGameBase):
     clip: Optional[RawgClip]
 
 
+class RawgGameSuggested(RawgGameBase):
+    short_screenshots: List[RawgScreenshot]
+
+    # Optional fields
+    clip: Optional[RawgClip]
+
+
 class RawgGame(RawgGameBase):
     achievements_count: int
     collections_count: int
@@ -243,6 +231,22 @@ class RawgGame(RawgGameBase):
 class RawgSearch(RawgBase):
     count: int
     results: List[RawgGameSearch]
+
+    # Optional fields
+    next: Optional[str]
+    previous: Optional[str]
+
+
+class RawgSuggested(RawgBase):
+    count: int
+    results: List[RawgGameSuggested]
+
+    updated: str
+    seo_title: str
+    seo_description: str
+    seo_h1: str
+    seo_descriptions: dict
+    seo_text: str
 
     # Optional fields
     next: Optional[str]
