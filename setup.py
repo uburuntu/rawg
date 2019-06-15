@@ -21,10 +21,10 @@ setuptools.setup(
     packages=['rawg'],
     requires_python='>=3.6',
     install_requires=['aiohttp', 'pydantic', 'requests'],
-    classifiers=(
+    classifiers=[
         'Development Status :: 3 - Alpha',
         'Intended Audience :: Developers',
         'Intended Audience :: System Administrators',
         'Programming Language :: Python :: 3',
-    )
+    ],
 )

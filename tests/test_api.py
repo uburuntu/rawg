@@ -1,8 +1,6 @@
-import asyncio
-
 import pytest
 
-from rawg import AioRawg, Rawg
+from rawg import Rawg
 
 
 class TestApi:
