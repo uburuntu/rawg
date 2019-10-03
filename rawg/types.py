@@ -209,10 +209,6 @@ class RawgGame(RawgGameBase):
     reddit_name: str
     reddit_url: str
     screenshots_count: int
-    seo_description: str
-    seo_descriptions: dict
-    seo_h1: str
-    seo_title: str
     stores: List[RawgStore]
     tags: list
     twitch_count: int
@@ -226,6 +222,11 @@ class RawgGame(RawgGameBase):
     esrb_rating: Optional[dict]
     reactions: Optional[dict]
     redirect: Optional[str]
+
+    seo_description: Optional[str]
+    seo_descriptions: Optional[dict]
+    seo_h1: Optional[str]
+    seo_title: Optional[str]
 
 
 class RawgSearch(RawgBase):
@@ -242,12 +243,13 @@ class RawgSuggested(RawgBase):
     results: List[RawgGameSuggested]
 
     updated: str
-    seo_title: str
-    seo_description: str
-    seo_h1: str
-    seo_descriptions: dict
     seo_text: str
 
     # Optional fields
     next: Optional[str]
     previous: Optional[str]
+
+    seo_title: Optional[str]
+    seo_description: Optional[str]
+    seo_h1: Optional[str]
+    seo_descriptions: Optional[dict]
