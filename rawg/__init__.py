@@ -1,3 +1,3 @@
 from .api import AioRawg, Rawg
 
-__version__ = '0.3'
+__version__ = '0.4'
