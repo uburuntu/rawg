@@ -16,6 +16,7 @@ class TestTypes:
         'minecraft',
         'metal gear',
         'dark souls',
+        'half life',
     ])
     async def test_types_by_search(self, keyword):
         search = await self.rawg.search(keyword, page_size=1000)
@@ -27,6 +28,7 @@ class TestTypes:
         'minecraft',
         'metal-gear-solid-v-the-phantom-pain',
         'dark-souls',
+        'half-life-2',
     ])
     async def test_types_by_suggested(self, slug):
         search = await self.rawg.suggested(slug, page_size=1000)

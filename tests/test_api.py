@@ -12,6 +12,7 @@ class TestApi:
         'minecraft',
         'metal gear',
         'dark souls',
+        'half life',
     ])
     def test_search(self, keyword):
         self.rawg.search(keyword, page_size=10)
@@ -21,6 +22,7 @@ class TestApi:
         'minecraft',
         'metal-gear-solid-v-the-phantom-pain',
         'dark-souls',
+        'half-life-2',
     ])
     def test_search(self, slug):
         self.rawg.info(slug)
@@ -30,6 +32,7 @@ class TestApi:
         'minecraft',
         'metal-gear-solid-v-the-phantom-pain',
         'dark-souls',
+        'half-life-2',
     ])
     def test_search(self, slug):
         self.rawg.suggested(slug)
