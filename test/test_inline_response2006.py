@@ -40,14 +40,14 @@ class TestInlineResponse2006(unittest.TestCase):
                 next = '0', 
                 previous = '0', 
                 results = [
-                    {image=@image.jpg, hidden=false}
+                    {'image': '@image.jpg', 'hidden': False}
                     ]
             )
         else :
             return InlineResponse2006(
                 count = 56,
                 results = [
-                    {image=@image.jpg, hidden=false}
+                    {'image': '@image.jpg', 'hidden': False}
                     ],
         )
 

@@ -1,6 +1,6 @@
 # rawg
 
-[![Python](https://img.shields.io/badge/Python-2.7%20%7C%203.4%20%7C%203.5%20%7C%203.6%20%7C%203.7%20%7C%203.8-blue.svg?longCache=true)]()
+[![Python](https://img.shields.io/badge/Python-3.6%20%7C%203.7%20%7C%203.8-blue.svg?longCache=true)]()
 [![PyPI](https://img.shields.io/pypi/v/rawg.svg)](https://pypi.python.org/pypi/rawg)
 [![Build Status](https://travis-ci.org/uburuntu/rawg.svg?branch=master)](https://travis-ci.org/uburuntu/rawg)
 
