@@ -13,6 +13,7 @@
 from __future__ import absolute_import
 
 # import models into model package
+from rawg.models.added_by_status import AddedByStatus
 from rawg.models.data import Data
 from rawg.models.developer import Developer
 from rawg.models.developer_single import DeveloperSingle
@@ -48,6 +49,7 @@ from rawg.models.position import Position
 from rawg.models.publisher import Publisher
 from rawg.models.publisher_single import PublisherSingle
 from rawg.models.ratings import Ratings
+from rawg.models.reactions import Reactions
 from rawg.models.reddit import Reddit
 from rawg.models.screen_shot import ScreenShot
 from rawg.models.store import Store
