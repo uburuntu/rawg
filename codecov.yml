@@ -1,4 +1,0 @@
-ignore:
-  - 'examples'
-  - 'tests'
-  - 'setup.py'

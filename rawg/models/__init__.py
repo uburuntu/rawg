@@ -1,7 +1,6 @@
 # coding: utf-8
 
 # flake8: noqa
-
 """
     RAWG Video Games Database API
 
@@ -14,28 +13,7 @@
 
 from __future__ import absolute_import
 
-__version__ = "1.0.1"
-
-# import apis into sdk package
-from rawg.api.creator_roles_api import CreatorRolesApi
-from rawg.api.creators_api import CreatorsApi
-from rawg.api.developers_api import DevelopersApi
-from rawg.api.games_api import GamesApi
-from rawg.api.genres_api import GenresApi
-from rawg.api.platforms_api import PlatformsApi
-from rawg.api.publishers_api import PublishersApi
-from rawg.api.stores_api import StoresApi
-from rawg.api.tags_api import TagsApi
-
-# import ApiClient
-from rawg.api_client import ApiClient
-from rawg.configuration import Configuration
-from rawg.exceptions import OpenApiException
-from rawg.exceptions import ApiTypeError
-from rawg.exceptions import ApiValueError
-from rawg.exceptions import ApiKeyError
-from rawg.exceptions import ApiException
-# import models into sdk package
+# import models into model package
 from rawg.models.developer import Developer
 from rawg.models.developer_single import DeveloperSingle
 from rawg.models.game import Game
@@ -77,4 +55,3 @@ from rawg.models.tag import Tag
 from rawg.models.tag_single import TagSingle
 from rawg.models.twitch import Twitch
 from rawg.models.youtube import Youtube
-

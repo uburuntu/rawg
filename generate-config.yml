@@ -1,0 +1,26 @@
+# Specifies that only a library source code is to be generated. (Default: false)
+generateSourceCodeOnly: 'false'
+
+# Hides the generation timestamp when files are generated. (Default: true)
+hideGenerationTimestamp: 'true'
+
+# library template (sub-template) to use: asyncio, tornado, urllib3 (Default: urllib3)
+library: 'asyncio'
+
+# python package name (convention: snake_case). (Default: openapi_client)
+packageName: 'rawg'
+
+# python package URL.
+packageUrl: 'https://github.com/uburuntu/rawg'
+
+# python package version. (Default: 1.0.0)
+packageVersion: '1.0.1'
+
+# python project name in setup.py (e.g. petstore-api).
+projectName: 'rawg'
+
+# Sort method arguments to place required parameters before optional parameters. (Default: true)
+sortParamsByRequiredFlag: 'true'
+
+# use the nose test framework (Default: false)
+useNose: 'false'

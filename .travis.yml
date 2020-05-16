@@ -1,21 +1,19 @@
-dist: xenial
-sudo: false
-
+# ref: https://docs.travis-ci.com/user/languages/python
 language: python
 
 python:
-  - '3.6'
-  - '3.7'
-  - '3.8-dev'
+  - "2.7"
+  - "3.4"
+  - "3.5"
+  - "3.6"
+  - "3.7"
+  - "3.8"
 
 install:
-  - pip install -r requirements-dev.txt
+  - "pip install -r requirements.txt"
+  - "pip install -r test-requirements.txt"
 
-script:
-  - pytest -vl --cov=./
-
-after_success:
-  - codecov
+script: nosetests
 
 notifications:
     email: false
