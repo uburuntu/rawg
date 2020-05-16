@@ -14,9 +14,6 @@
 
 from __future__ import absolute_import
 
-__name__ = 'rawg'
-__version__ = '1.0.1'
-
 # import apis into sdk package
 from rawg.api.creator_roles_api import CreatorRolesApi
 from rawg.api.creators_api import CreatorsApi

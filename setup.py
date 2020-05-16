@@ -1,7 +1,5 @@
 from setuptools import find_packages, setup
 
-import rawg
-
 
 def read(filename):
     with open(filename) as file:
@@ -9,8 +7,8 @@ def read(filename):
 
 
 setup(
-    name=rawg.__name__,
-    version=rawg.__version__,
+    name='rawg',
+    version='1.0.1',
     author='uburuntu',
     author_email='bekbulatov.ramzan@ya.ru',
     url='https://github.com/uburuntu/rawg',
