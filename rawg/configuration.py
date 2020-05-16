@@ -320,8 +320,7 @@ class Configuration(object):
         return "Python SDK Debug Report:\n"\
                "OS: {env}\n"\
                "Python Version: {pyversion}\n"\
-               "Version of the API: v1.0\n"\
-               "SDK Package Version: 1.0.1".\
+               "Version of the API: v1.0\n".\
                format(env=sys.platform, pyversion=sys.version)
 
     def get_host_settings(self):

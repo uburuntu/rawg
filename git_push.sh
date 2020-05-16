@@ -8,12 +8,12 @@ git_repo_id=$2
 release_note=$3
 git_host=$4
 
-if [ "$git_host" = "" ]; then
+if [[ "$git_host" = "" ]]; then
     git_host="github.com"
     echo "[INFO] No command line input provided. Set \$git_host to $git_host"
 fi
 
-if [ "$git_user_id" = "" ]; then
+if [[ "$git_user_id" = "" ]]; then
     git_user_id="uburuntu"
     echo "[INFO] No command line input provided. Set \$git_user_id to $git_user_id"
 fi
@@ -39,7 +39,7 @@ git commit -m "$release_note"
 
 # Sets the new remote
 git_remote=`git remote`
-if [ "$git_remote" = "" ]; then # git remote not defined
+if [[ "$git_remote" = "" ]]; then # git remote not defined
 
     if [[ "$GIT_TOKEN" = "" ]]; then
         echo "[INFO] \$GIT_TOKEN (environment variable) is not set. Using the git credential in your environment."
