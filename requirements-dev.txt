@@ -1,6 +1,6 @@
 -r requirements.txt
 
-codecov==2.0.15
-pytest==4.6.3
-pytest-asyncio==0.10.0
-pytest-cov==2.7.1
+codecov==2.0
+pytest==5.4
+pytest-asyncio==0.12
+pytest-cov==2.8
