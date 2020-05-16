@@ -58,7 +58,7 @@ class TestGameSingle(unittest.TestCase):
                 ratings = rawg.models.ratings.Ratings(), 
                 reactions = rawg.models.reactions.Reactions(), 
                 added = 56, 
-                added_by_status = rawg.models.added_by_status.Added by status(), 
+                added_by_status = rawg.models.added_by_status.Added_by_status(),
                 playtime = 56, 
                 screenshots_count = 56, 
                 movies_count = 56, 

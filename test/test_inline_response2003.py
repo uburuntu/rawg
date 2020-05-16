@@ -53,7 +53,7 @@ class TestInlineResponse2003(unittest.TestCase):
                         ratings_count = 56, 
                         reviews_text_count = '0', 
                         added = 56, 
-                        added_by_status = rawg.models.added_by_status.Added by status(), 
+                        added_by_status = rawg.models.added_by_status.Added_by_status(),
                         metacritic = 56, 
                         playtime = 56, 
                         suggestions_count = 56, )
@@ -76,7 +76,7 @@ class TestInlineResponse2003(unittest.TestCase):
                         ratings_count = 56, 
                         reviews_text_count = '0', 
                         added = 56, 
-                        added_by_status = rawg.models.added_by_status.Added by status(), 
+                        added_by_status = rawg.models.added_by_status.Added_by_status(),
                         metacritic = 56, 
                         playtime = 56, 
                         suggestions_count = 56, )
