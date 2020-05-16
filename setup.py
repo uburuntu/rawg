@@ -19,7 +19,7 @@ def load_requirements(filename: str) -> list:
 
 setup(
     name='rawg',
-    version='1.0.2',
+    version='1.0.3',
     author='uburuntu',
     author_email='bekbulatov.ramzan@ya.ru',
     url='https://github.com/uburuntu/rawg',
