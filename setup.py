@@ -8,7 +8,7 @@ def read(filename):
 
 setup(
     name='rawg',
-    version='1.0.1',
+    version='1.0.2',
     author='uburuntu',
     author_email='bekbulatov.ramzan@ya.ru',
     url='https://github.com/uburuntu/rawg',
