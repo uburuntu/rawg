@@ -157,6 +157,8 @@ Every API request should have a `User-Agent` header with your app name.
 
 ## Another libraries
 
+**R**: rabiibouhestine/[Rawg](https://github.com/rabiibouhestine/Rawg)
+
 **Python**: laundmo/[rawgpy](https://pypi.org/project/rawgpy)
 
 **Node.js**: orels1/[rawger](https://github.com/orels1/rawger)
