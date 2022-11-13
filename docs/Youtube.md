@@ -1,5 +1,6 @@
 # Youtube
 
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
@@ -15,7 +16,7 @@ Name | Type | Description | Notes
 **like_count** | **int** |  | [optional] [readonly] 
 **dislike_count** | **int** |  | [optional] [readonly] 
 **favorite_count** | **int** |  | [optional] [readonly] 
-**thumbnails** | [**object**](.md) |  | [optional] [readonly] 
+**thumbnails** | **object** |  | [optional] [readonly] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

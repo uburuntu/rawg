@@ -8,7 +8,7 @@ Method | HTTP request | Description
 
 
 # **creator_roles_list**
-> InlineResponse200 creator_roles_list(page=page, page_size=page_size)
+> CreatorRolesList200Response creator_roles_list(page=page, page_size=page_size)
 
 Get a list of creator positions (jobs).
 
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse200**](InlineResponse200.md)
+[**CreatorRolesList200Response**](CreatorRolesList200Response.md)
 
 ### Authorization
 

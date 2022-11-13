@@ -1,5 +1,6 @@
 # PlatformParentSingle
 
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

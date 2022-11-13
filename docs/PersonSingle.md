@@ -1,5 +1,6 @@
 # PersonSingle
 
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **genres_list**
-> InlineResponse2008 genres_list(ordering=ordering, page=page, page_size=page_size)
+> GenresList200Response genres_list(ordering=ordering, page=page, page_size=page_size)
 
 Get a list of video game genres.
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2008**](InlineResponse2008.md)
+[**GenresList200Response**](GenresList200Response.md)
 
 ### Authorization
 

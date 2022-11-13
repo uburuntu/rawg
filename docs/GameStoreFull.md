@@ -1,5 +1,6 @@
 # GameStoreFull
 
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

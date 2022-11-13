@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **developers_list**
-> InlineResponse2002 developers_list(page=page, page_size=page_size)
+> DevelopersList200Response developers_list(page=page, page_size=page_size)
 
 Get a list of game developers.
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2002**](InlineResponse2002.md)
+[**DevelopersList200Response**](DevelopersList200Response.md)
 
 ### Authorization
 

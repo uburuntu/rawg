@@ -1,5 +1,6 @@
 # PublisherSingle
 
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -1,5 +1,6 @@
 # StoreSingle
 
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

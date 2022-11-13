@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **tags_list**
-> InlineResponse20013 tags_list(page=page, page_size=page_size)
+> TagsList200Response tags_list(page=page, page_size=page_size)
 
 Get a list of tags.
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20013**](InlineResponse20013.md)
+[**TagsList200Response**](TagsList200Response.md)
 
 ### Authorization
 

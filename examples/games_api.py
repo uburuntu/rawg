@@ -4,7 +4,7 @@ import rawg
 
 
 async def requests():
-    async with rawg.ApiClient() as api_client:
+    async with rawg.ApiClient(rawg.Configuration(api_key={'key': 'YOUR_API_KEY'})) as api_client:
         # Create an instance of the API class
         api = rawg.GamesApi(api_client)
 
@@ -14,6 +14,7 @@ async def requests():
         # Waiting for requests
         for coro in asyncio.as_completed(coros):
             game: rawg.GameSingle = await coro
+            print('——————————————————————————————————————————————')
             print('        Name |', game.name)
             print('    Released |', game.released)
             print('      Rating |', game.rating)
@@ -21,6 +22,7 @@ async def requests():
             print('     Website |', game.website)
             print('  Metacritic |', game.metacritic)
             print('——————————————————————————————————————————————')
+            print()
 
 
 if __name__ == '__main__':

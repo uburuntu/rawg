@@ -1,5 +1,6 @@
 # TagSingle
 
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
