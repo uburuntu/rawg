@@ -1,5 +1,6 @@
 # GamePlatformMetacritic
 
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

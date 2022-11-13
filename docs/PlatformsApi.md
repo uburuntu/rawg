@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 
 # **platforms_list**
-> InlineResponse2009 platforms_list(ordering=ordering, page=page, page_size=page_size)
+> PlatformsList200Response platforms_list(ordering=ordering, page=page, page_size=page_size)
 
 Get a list of video game platforms.
 
@@ -55,7 +55,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2009**](InlineResponse2009.md)
+[**PlatformsList200Response**](PlatformsList200Response.md)
 
 ### Authorization
 
@@ -74,7 +74,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **platforms_lists_parents_list**
-> InlineResponse20010 platforms_lists_parents_list(ordering=ordering, page=page, page_size=page_size)
+> PlatformsListsParentsList200Response platforms_lists_parents_list(ordering=ordering, page=page, page_size=page_size)
 
 Get a list of parent platforms.
 
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20010**](InlineResponse20010.md)
+[**PlatformsListsParentsList200Response**](PlatformsListsParentsList200Response.md)
 
 ### Authorization
 

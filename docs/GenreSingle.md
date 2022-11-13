@@ -1,5 +1,6 @@
 # GenreSingle
 
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

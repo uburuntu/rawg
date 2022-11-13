@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **creators_list**
-> InlineResponse2001 creators_list(page=page, page_size=page_size)
+> CreatorsList200Response creators_list(page=page, page_size=page_size)
 
 Get a list of game creators.
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse2001**](InlineResponse2001.md)
+[**CreatorsList200Response**](CreatorsList200Response.md)
 
 ### Authorization
 

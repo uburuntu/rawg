@@ -1,5 +1,6 @@
 # Store
 
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

@@ -14,7 +14,7 @@ packageName: 'rawg'
 packageUrl: 'https://github.com/uburuntu/rawg'
 
 # python package version. (Default: 1.0.0)
-packageVersion: '1.0.1'
+packageVersion: '1.2.0'
 
 # python project name in setup.py (e.g. petstore-api).
 projectName: 'rawg'

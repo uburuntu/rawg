@@ -1,5 +1,6 @@
 # DeveloperSingle
 
+
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------

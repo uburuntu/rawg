@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **publishers_list**
-> InlineResponse20011 publishers_list(page=page, page_size=page_size)
+> PublishersList200Response publishers_list(page=page, page_size=page_size)
 
 Get a list of video game publishers.
 
@@ -52,7 +52,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20011**](InlineResponse20011.md)
+[**PublishersList200Response**](PublishersList200Response.md)
 
 ### Authorization
 

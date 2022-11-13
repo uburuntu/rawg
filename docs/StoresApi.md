@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 
 # **stores_list**
-> InlineResponse20012 stores_list(ordering=ordering, page=page, page_size=page_size)
+> StoresList200Response stores_list(ordering=ordering, page=page, page_size=page_size)
 
 Get a list of video game storefronts.
 
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse20012**](InlineResponse20012.md)
+[**StoresList200Response**](StoresList200Response.md)
 
 ### Authorization
 

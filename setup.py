@@ -19,7 +19,7 @@ def load_requirements(filename: str) -> list:
 
 setup(
     name='rawg',
-    version='1.0.3',
+    version='1.2.0',
     author='uburuntu',
     author_email='bekbulatov.ramzan@ya.ru',
     url='https://github.com/uburuntu/rawg',
@@ -30,7 +30,7 @@ setup(
     packages=find_packages(exclude=["test", "tests"]),
     requires_python='>=3.6',
     install_requires=load_requirements('requirements.txt'),
-    extras_require={'test': load_requirements('requirements.test.txt')},
+    extras_require={'test': load_requirements('test-requirements.txt')},
     keywords=['RAWG Video Games Database API', 'OpenAPI'],
     classifiers=[
         'Development Status :: 3 - Alpha',
